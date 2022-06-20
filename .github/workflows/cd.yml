@@ -29,8 +29,8 @@ jobs:
         uses: burnett01/rsync-deployments@5.1
         with:
           switches: -avzr --delete
-          path: ./build*
-          remote_path: /home/app
+          path: ./build/*
+          remote_path: /home/react_app
           remote_host: ${{ secrets.BACKEND_SERVER_HOST }}
           remote_user: root
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
